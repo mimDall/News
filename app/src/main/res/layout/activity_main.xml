@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.NewsListActivity">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+<!--        <ProgressBar-->
+<!--            android:id="@+id/loadNewsProgressBar"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:padding="2dp"-->
+
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <TextView
+            android:id="@+id/tv_noNetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Network is not available"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="712dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/grey"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/search_edt_bg"
+            android:drawableStart="@drawable/ic_search"
+            android:hint=" search"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginTop="8dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/searchEditText">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/newsListRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/progressbar_bg"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/recycler_item" />
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/loadNewsProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchorGravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/progressbar_bg"
+        android:padding="12dp"
+        android:visibility="invisible"
+
+ />
+
+    <include layout="@layout/bottom_sheet_filter"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menuRefresh"
+        android:title="Reload"/>
+
+    <item android:title="copy"
+        android:id="@+id/menuCopy"/>
+
+    <item android:title="share"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_share_24"
+        android:id="@+id/menuShare"/>
+
+    <item android:title="open with"
+        android:id="@+id/menuOpenWith"/>
+
+
+
+
+</menu>

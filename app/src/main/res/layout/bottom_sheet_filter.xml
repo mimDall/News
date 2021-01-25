@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/bottom_sheet_filter"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="50dp"
+    android:background="@drawable/filter_bg"
+    >
+
+        <LinearLayout
+            android:id="@+id/filter_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filter_title_bg"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/leftArrow"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_up_arrow"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="16dp"
+                />
+
+            <TextView
+                android:id="@+id/bottom_sheet_title_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="News Filter"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                />
+
+            <ImageView
+                android:id="@+id/rightArrow"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_up_arrow"
+                android:layout_gravity="end|center"/>
+
+
+        </LinearLayout>
+
+
+    <!--    topic spinner-->
+
+
+    <TextView
+        android:id="@+id/bottom_sheet_topicTitle_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:text="Topic"
+        android:textColor="@color/Black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filter_title_layout" />
+    <Spinner
+        android:id="@+id/bottom_sheet_topic_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_topicTitle_tv"
+        android:foreground="?android:selectableItemBackground"/>
+
+    <!--    country spinner-->
+
+
+    <TextView
+        android:id="@+id/bottom_sheet_countryTitle_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:text="Country"
+        android:textColor="@color/Black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_topic_spinner" />
+    <Spinner
+        android:id="@+id/bottom_sheet_country_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_countryTitle_tv"
+        android:foreground="?android:selectableItemBackground"/>
+
+
+    <!--   language spinner-->
+
+
+    <TextView
+        android:id="@+id/bottom_sheet_languageTitle_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:text="Language"
+        android:textColor="@color/Black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_country_spinner" />
+    <Spinner
+        android:id="@+id/bottom_sheet_language_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_languageTitle_tv"
+        android:foreground="?android:selectableItemBackground"/>
+
+
+    <View
+        android:id="@+id/bottom_sheet_view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_language_spinner" />
+
+
+    <Button
+        android:id="@+id/bottom_sheet_applyBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Apply"
+        app:backgroundTint="#fff"
+        android:textColor="@color/Black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_view"
+        style="?android:attr/borderlessButtonStyle"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
