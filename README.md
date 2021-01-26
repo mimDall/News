@@ -8,5 +8,7 @@ A News Feed App
 - Volley
 - Picasso
 - ButterKnife
-# The Rest API:
+## Architecture Pattern:
+MVP
+## The Rest API:
 [gnews.io](https://gnews.io)
